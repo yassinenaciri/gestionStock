@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20220424031332",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "responsable_projet",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prenom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mail",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ResponsableProjet",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "projet",
+      "otherEntityRelationshipName": "responsables",
+      "ownerSide": true,
+      "relationshipName": "projets",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

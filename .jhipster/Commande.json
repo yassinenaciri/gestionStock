@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20220424031325",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "commande",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recu",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "quantite",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Commande",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "fournisseurArticle",
+      "otherEntityRelationshipName": "commandes",
+      "ownerSide": true,
+      "relationshipName": "items",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,51 @@
+{
+  "applications": "*",
+  "changelogDate": "20220424031324",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "projet",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Projet",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "frais",
+      "otherEntityRelationshipName": "projet",
+      "relationshipName": "fraisSupplementaire",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "articleProjet",
+      "otherEntityRelationshipName": "projet",
+      "relationshipName": "items",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "article",
+      "otherEntityRelationshipName": "projet",
+      "ownerSide": true,
+      "relationshipName": "articles",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "responsableProjet",
+      "otherEntityRelationshipName": "projets",
+      "ownerSide": false,
+      "relationshipName": "responsables",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

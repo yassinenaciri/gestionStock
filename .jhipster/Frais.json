@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20220424031327",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "frais",
+  "fields": [
+    {
+      "fieldName": "prix",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "desscription",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Frais",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "projet",
+      "otherEntityRelationshipName": "fraisSupplementaire",
+      "relationshipName": "projet",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

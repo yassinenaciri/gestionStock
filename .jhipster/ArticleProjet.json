@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "changelogDate": "20220424031328",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "article_projet",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vendu",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ArticleProjet",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "paiement",
+      "otherEntityRelationshipName": "item",
+      "relationshipName": "paiements",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "articles",
+      "relationshipName": "client",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "projet",
+      "otherEntityRelationshipName": "items",
+      "relationshipName": "projet",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

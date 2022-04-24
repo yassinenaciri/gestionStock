@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "changelogDate": "20220424031323",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "article",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "desciption",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Article",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "fournisseurArticle",
+      "otherEntityRelationshipName": "article",
+      "relationshipName": "optionsAchat",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "projet",
+      "otherEntityRelationshipName": "articles",
+      "ownerSide": false,
+      "relationshipName": "projet",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20220424031321",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "admin",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prenom",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Admin",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "entreprise",
+      "otherEntityRelationshipName": "admin",
+      "relationshipName": "entreprises",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

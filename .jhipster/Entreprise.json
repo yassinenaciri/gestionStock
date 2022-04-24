@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20220424031331",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "entreprise",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Entreprise",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "admin",
+      "otherEntityRelationshipName": "entreprises",
+      "relationshipName": "admin",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "sousAdmin",
+      "otherEntityRelationshipName": "entreprises",
+      "relationshipName": "sousAdmin",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

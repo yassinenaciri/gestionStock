@@ -1,0 +1,99 @@
+
+
+
+entity Admin{
+   nom String,
+   prenom String,
+}
+
+
+entity Fournisseur{
+   nom String,
+   ice String,
+   tel String,
+   adresse String,
+   description String
+}
+
+
+entity Article{
+   nom String,
+   desciption String,
+}
+
+
+
+entity Projet {
+   nom String,
+   description String,
+}
+entity Commande {
+   nom String,
+   description String,
+   recu Boolean,
+   quantite Integer,
+}
+
+
+entity FournisseurArticle {
+   prix Float
+}
+
+
+entity Frais {
+   prix Float,
+   desscription String
+}
+
+entity ArticleProjet {
+	nom String,
+   description String,
+   vendu Boolean,
+}
+
+entity Paiement {
+	nom String,
+   prenom String,
+   mail String,
+}
+entity Client {
+	nom String,
+   prenom String,
+   mail String,
+}
+
+entity Entreprise {
+	nom String,
+}
+
+entity ResponsableProjet {
+	nom String,
+   prenom String,
+   mail String,
+}
+
+entity SousAdmin {
+	nom String,
+   prenom String,
+   mail String,
+}
+
+relationship OneToMany {
+    Article{optionsAchat} to FournisseurArticle{article}
+    Client{articles} to ArticleProjet{client}
+	Entreprise{admin} to Admin{entreprises} 
+    Entreprise{sousAdmin} to SousAdmin{entreprises}
+    Fournisseur{menu} to FournisseurArticle{fournisseur}
+    Projet{fraisSupplementaire} to Frais{projet}
+    Projet{items} to ArticleProjet{projet}
+    ArticleProjet{paiements} to Paiement{item}
+}
+
+relationship ManyToMany {
+ResponsableProjet{projets} to Projet{responsables}
+Projet{articles} to Article{projet}
+Commande{items} to FournisseurArticle{commandes}
+}
+paginate all with infinite-scroll
+
+service all with serviceImpl 

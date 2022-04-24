@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20220424031326",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "fournisseur_article",
+  "fields": [
+    {
+      "fieldName": "prix",
+      "fieldType": "Float"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "FournisseurArticle",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "article",
+      "otherEntityRelationshipName": "optionsAchat",
+      "relationshipName": "article",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "fournisseur",
+      "otherEntityRelationshipName": "menu",
+      "relationshipName": "fournisseur",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "commande",
+      "otherEntityRelationshipName": "items",
+      "ownerSide": false,
+      "relationshipName": "commandes",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}
